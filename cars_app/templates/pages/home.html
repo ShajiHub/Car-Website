@@ -1,0 +1,50 @@
+{% extends base_template|default:"layout.html" %}
+
+
+{% block content %}
+   <main class="container">
+        <section>
+            <h2>Featured Cars</h2>
+            <p>Browse our selection of reliable and affordable used cars.</p>
+        </section>
+
+        <section class="cars">
+            {% for car in cars %}
+            <div class="car-card">
+                <img src="{{ car.image }}" alt="{{ car.name }}">
+                <h3>{{ car.name }}</h3>
+                <p>{{ car.year }} • {{ car.transmission }} • {{ car.fuel }}</p>
+                <p class="price"> {{ car.price }}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+
+        <section class="contact-form">
+        <h2>Contact Form</h2>
+        <p>Have any questions? Send us a message!</p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ contact_form.non_field_errors }}
+            <div>
+                {{ contact_form.name.label_tag }}
+                {{ contact_form.name }}
+                {{ contact_form.name.errors }}
+            </div>
+            <div>
+                {{ contact_form.email.label_tag }}
+                {{ contact_form.email }}
+                {{ contact_form.email.errors }}
+            </div>
+            <div>
+                {{ contact_form.message.label_tag }}
+                {{ contact_form.message }}
+                {{ contact_form.message.errors }}
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        </section>
+
+    </main>
+{% endblock %}
+

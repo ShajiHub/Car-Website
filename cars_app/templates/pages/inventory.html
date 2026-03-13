@@ -1,0 +1,12 @@
+{% extends base_template|default:"layout.html" %}
+
+{% block content %}
+<h2>Add Car to Inventory</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ inventory_form.as_p }}
+    
+    <button type="submit">Add Car</button>
+</form>
+{% endblock %}

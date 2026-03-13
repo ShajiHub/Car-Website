@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Buy quality used cars at affordable prices. Trusted local car seller with verified vehicles.">
+    <meta name="keywords" content="used cars, car seller, buy cars, affordable cars">
+    <meta name="author" content="CarZone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarZone | Buy Used Cars</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>CarZone</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="#">Cars</a>
+            <a href="{% url 'inventory' %}">Inventory</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Find Your Perfect Used Car</h2>
+            <p>Verified vehicles, affordable prices, trusted service</p>
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    {% block content %}
+    {% endblock %}
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 CarZone. All rights reserved.</p>
+    </footer>
+</body>
+</html>
