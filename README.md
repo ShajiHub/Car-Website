@@ -1,23 +1,3 @@
-# Used Car Sales ‑ Website
-
-A dynamic Django‑based car website built with Python, HTML, CSS, and JavaScript. This project lets users explore and view car listings, and provides a foundation for building a full car catalog or dealership site.
-
-## Features
-
-- Django backend with models and views
-- Car listing and detail pages
-- Organized apps structure (`cars_app`)
-- Uses Django templating for frontend
-- Simple setup and run configuration
-
-## Project Structure
-cars_app/ # Django app containing models, views, templates
-cars_project/ # Main Django project configuration
-manage.py # Django project management script
-requirements.txt # Python dependencies
-db.sqlite3 # Default SQLite database
-
-## Getting Started
 
 # Django Cars Project
 
