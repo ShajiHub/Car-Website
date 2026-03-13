@@ -207,5 +207,6 @@ Use Django static tags:
 ---
 
 # Author
-
-Django learning project created for practice and understanding Django framework setup.
+**Shajitha Begam**  
+GitHub: https://github.com/ShajiHub
+Django learning project created for Education and Training Django framework setup.
