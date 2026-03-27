@@ -1,41 +1,17 @@
-# https://code.visualstudio.com/docs/python/tutorial-django
-py --version
-
+# Create project
 python -m venv venv
+venv\Scripts\activate   # or source venv/bin/activate
 
-#for windows users
-venv\Scripts\activate
-
-#for mac users
-source venv/bin/activate
-
-python -m pip install --upgrade pip
-
-
+pip install --upgrade pip
 pip install django
 
-django-admin --version
-
-
+# Create project
 django-admin startproject cars_project .
-
-
 python manage.py migrate
-
 python manage.py runserver
 
-ctrl+ c to stop the server
-
+# Create app
 python manage.py startapp cars_app
 
-#add the app name inside settings.py in installed app
-
-#create templates and static folder
-#inside templates layout.html and inside pages folder in templates add the rest of the pages like home,inventory,about
-
-#inside static add all the assets, js and css folder and file
-
-#make sure to connect with views and urs
-
-
-
+# Save dependencies
+pip freeze > requirements.txt
