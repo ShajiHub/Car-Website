@@ -1,17 +1,3 @@
-# Create project
-python -m venv venv
-venv\Scripts\activate   # or source venv/bin/activate
-
 pip install --upgrade pip
 pip install django
 
-# Create project
-django-admin startproject cars_project .
-python manage.py migrate
-python manage.py runserver
-
-# Create app
-python manage.py startapp cars_app
-
-# Save dependencies
-pip freeze > requirements.txt
